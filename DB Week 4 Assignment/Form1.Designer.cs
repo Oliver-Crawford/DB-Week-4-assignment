@@ -38,11 +38,11 @@
             this.inputFirstName = new System.Windows.Forms.TextBox();
             this.InputLastName = new System.Windows.Forms.TextBox();
             this.InputDOB = new System.Windows.Forms.TextBox();
-            this.InputAcceptsCalls = new System.Windows.Forms.RadioButton();
             this.BtnRead = new System.Windows.Forms.Button();
             this.BtnCreate = new System.Windows.Forms.Button();
             this.BtnUpdate = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
+            this.InputAcceptsCalls = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,16 +141,6 @@
             this.InputDOB.Size = new System.Drawing.Size(200, 20);
             this.InputDOB.TabIndex = 10;
             // 
-            // InputAcceptsCalls
-            // 
-            this.InputAcceptsCalls.AutoSize = true;
-            this.InputAcceptsCalls.Location = new System.Drawing.Point(118, 276);
-            this.InputAcceptsCalls.Name = "InputAcceptsCalls";
-            this.InputAcceptsCalls.Size = new System.Drawing.Size(14, 13);
-            this.InputAcceptsCalls.TabIndex = 11;
-            this.InputAcceptsCalls.TabStop = true;
-            this.InputAcceptsCalls.UseVisualStyleBackColor = true;
-            // 
             // BtnRead
             // 
             this.BtnRead.Location = new System.Drawing.Point(348, 197);
@@ -191,16 +181,26 @@
             this.BtnDelete.UseVisualStyleBackColor = true;
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
+            // InputAcceptsCalls
+            // 
+            this.InputAcceptsCalls.AutoSize = true;
+            this.InputAcceptsCalls.Location = new System.Drawing.Point(119, 276);
+            this.InputAcceptsCalls.Name = "InputAcceptsCalls";
+            this.InputAcceptsCalls.Size = new System.Drawing.Size(15, 14);
+            this.InputAcceptsCalls.TabIndex = 16;
+            this.InputAcceptsCalls.UseVisualStyleBackColor = true;
+            this.InputAcceptsCalls.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.InputAcceptsCalls);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnUpdate);
             this.Controls.Add(this.BtnCreate);
             this.Controls.Add(this.BtnRead);
-            this.Controls.Add(this.InputAcceptsCalls);
             this.Controls.Add(this.InputDOB);
             this.Controls.Add(this.InputLastName);
             this.Controls.Add(this.inputFirstName);
@@ -232,11 +232,11 @@
         private System.Windows.Forms.TextBox inputFirstName;
         private System.Windows.Forms.TextBox InputLastName;
         private System.Windows.Forms.TextBox InputDOB;
-        private System.Windows.Forms.RadioButton InputAcceptsCalls;
         private System.Windows.Forms.Button BtnRead;
         private System.Windows.Forms.Button BtnCreate;
         private System.Windows.Forms.Button BtnUpdate;
         private System.Windows.Forms.Button BtnDelete;
+        private System.Windows.Forms.CheckBox InputAcceptsCalls;
     }
 }
 

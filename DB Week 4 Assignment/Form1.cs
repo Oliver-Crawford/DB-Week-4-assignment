@@ -15,7 +15,7 @@ namespace DB_Week_4_Assignment
     public partial class Form1 : Form
     {
         //enter this when DB name available
-        string dbName = "";
+        string dbName = "contactsdb";
         public Form1()
         {
             InitializeComponent();
@@ -45,7 +45,7 @@ namespace DB_Week_4_Assignment
         {
             try
             {
-                string myConnectionString = "server=localhost;uid=root;" + $"pwd=;database={dbName}";
+                string myConnectionString = $"server=localhost;uid=root;pwd=;database={dbName}";
                 MySqlConnection connection = new MySqlConnection(myConnectionString);
                 connection.Open();
                 MySqlCommand command = new MySqlCommand("Select * from Contacts;", connection);
@@ -64,7 +64,7 @@ namespace DB_Week_4_Assignment
         {
             try
             {
-                string myConnectionString = "server=localhost;uid=root;" + $"pwd=;database={dbName}";
+                string myConnectionString = $"server=localhost;uid=root;pwd=;database={dbName}";
                 MySqlConnection connection = new MySqlConnection(myConnectionString);
                 string query = $"insert into Contacts(ContactId, FirstName, LastName, DateOfBirth, AllowContactByPhone, createdDate) values({InputID.Text}, \'{inputFirstName.Text}\', \'{InputLastName.Text}\', \'{InputDOB.Text}\', {InputAcceptsCalls.Checked}, CURRENT_DATE());";
                 connection.Open();
@@ -82,7 +82,7 @@ namespace DB_Week_4_Assignment
         {
             try
             {
-                string myConnectionString = "server=localhost;uid=root;" + $"pwd=;database={dbName}";
+                string myConnectionString = $"server=localhost;uid=root;pwd=;database={dbName}";
                 MySqlConnection connection = new MySqlConnection(myConnectionString);
                 string query = $"Update Contacts set FirstName=/'{inputFirstName.Text}/', LastName=/'{InputLastName.Text}/', DateOfBirth=/'{InputDOB.Text}/', AllowContactByPhone={InputAcceptsCalls.Checked} where ContactId={InputID.Text};";
                 connection.Open();
@@ -100,7 +100,7 @@ namespace DB_Week_4_Assignment
         {
             try
             {
-                string myConnectionString = "server=localhost;uid=root;" + $"pwd=;database={dbName}";
+                string myConnectionString = $"server=localhost;uid=root;pwd=;database={dbName}";
                 MySqlConnection connection = new MySqlConnection(myConnectionString);
                 string query = $"delete from Contacts where ContactId={InputID.Text};";
                 connection.Open();
@@ -113,6 +113,11 @@ namespace DB_Week_4_Assignment
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
