@@ -23,5 +23,10 @@ namespace DB_Week_4_Assignment
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
