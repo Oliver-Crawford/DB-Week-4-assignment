@@ -21,35 +21,26 @@ namespace DB_Week_4_Assignment
             InitializeComponent();
             
         }
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-
-
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
         private void InputID_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void inputFirstName_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void InputLastName_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -69,7 +60,6 @@ namespace DB_Week_4_Assignment
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void BtnCreate_Click(object sender, EventArgs e)
         {
             try
@@ -88,7 +78,6 @@ namespace DB_Week_4_Assignment
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
             try
@@ -107,7 +96,6 @@ namespace DB_Week_4_Assignment
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             try
